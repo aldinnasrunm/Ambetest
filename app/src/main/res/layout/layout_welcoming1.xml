@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/img_doctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_titleWelcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Selamat Datang\nDi Ambetes"
+        style="@style/poppinsSB40Dark"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/iv_doctor"
+        app:layout_constraintStart_toStartOf="@+id/iv_doctor"
+        app:layout_constraintTop_toBottomOf="@+id/iv_doctor" />
+
+    <TextView
+        android:id="@+id/tv_subWelcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bergabunglah dengan jutaan orang yang\nsudah merasakan manfaat Ambetest"
+        android:textAlignment="center"
+        style="@style/poppins14Dark"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_titleWelcoming"
+        app:layout_constraintStart_toStartOf="@+id/tv_titleWelcoming"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titleWelcoming" />
+
+    <TextView
+        android:id="@+id/tv_textWelcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:text="Dengan melanjutkan, anda sepakat untuk\nmenyetujui persyaratan Aplikasi"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/tv_subWelcoming"
+        app:layout_constraintTop_toBottomOf="@+id/tv_subWelcoming"
+        app:layout_constraintEnd_toEndOf="@id/tv_subWelcoming"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

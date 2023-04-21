@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.AngketActivity">
+
+    <TextView
+        android:id="@+id/tv_TitleMain7"
+        style="@style/poppinsSB32Dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="140dp"
+
+        android:layout_marginEnd="28dp"
+        android:text="Mohon isikan data diri Anda"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNametitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Nama Lengkap"
+        style="@style/poppins14MedDark"
+        app:layout_constraintStart_toStartOf="@+id/tv_TitleMain7"
+        app:layout_constraintTop_toBottomOf="@+id/tv_TitleMain7" />
+
+    <EditText
+        android:id="@+id/etNamaPasien"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Nama"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNametitle" />
+
+    <TextView
+        android:id="@+id/tvAgeTitle"
+        style="@style/poppins14MedDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Usia"
+        app:layout_constraintStart_toStartOf="@+id/tv_TitleMain7"
+        app:layout_constraintTop_toBottomOf="@+id/etNamaPasien" />
+
+    <EditText
+        android:id="@+id/etUsiaPasien"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="100dp"
+        android:hint="Usia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAgeTitle" />
+
+    <TextView
+        android:id="@+id/tvTahunText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Tahun"
+        app:layout_constraintBottom_toBottomOf="@+id/etUsiaPasien"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/poppins14MedDark"
+        app:layout_constraintStart_toEndOf="@+id/etUsiaPasien"
+        app:layout_constraintTop_toTopOf="@+id/etUsiaPasien" />
+
+    <TextView
+        android:id="@+id/tvAddressTitle"
+        style="@style/poppins14MedDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Alamat"
+        app:layout_constraintStart_toStartOf="@+id/tv_TitleMain7"
+        app:layout_constraintTop_toBottomOf="@+id/etUsiaPasien" />
+
+    <EditText
+        android:id="@+id/etAlamatPasien"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Alamat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddressTitle" />
+
+    <RadioGroup
+        android:id="@+id/rgGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/etAlamatPasien"
+        app:layout_constraintStart_toStartOf="@+id/etAlamatPasien"
+        app:layout_constraintTop_toBottomOf="@+id/etAlamatPasien">
+
+        <RadioButton
+            android:id="@+id/rbMen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Laki-laki" />
+
+        <RadioButton
+            android:id="@+id/rbWomen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Perempuan" />
+
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
