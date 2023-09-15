@@ -36,9 +36,28 @@
         <item name="android:textSize"> 14sp</item>
     </style>
 
+
+    <style name="poppins16MedDark" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/poppins_medium</item>
+        <item name="android:textColor">@color/colorBlueDark</item>
+        <item name="android:textSize"> 16sp</item>
+    </style>
+
     <style name="poppinsL10Dark" parent="@android:style/TextAppearance.Small">
         <item name="android:fontFamily">@font/poppins_light</item>
         <item name="android:textColor">@color/colorBlueDark</item>
+        <item name="android:textSize"> 10sp</item>
+    </style>
+
+    <style name="poppins11Grey" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize"> 11sp</item>
+    </style>
+
+    <style name="poppins10Green" parent="@android:style/TextAppearance.Small">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/colorGreen</item>
         <item name="android:textSize"> 10sp</item>
     </style>
 

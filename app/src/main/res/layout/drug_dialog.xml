@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/svItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTitlePopup"
+                style="@style/poppinsSB24Dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Informasi Obat"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvsubsPopup"
+                style="@style/poppins14Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Nama Obat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitlePopup" />
+
+            <EditText
+                android:id="@+id/etNamaObat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                android:hint="Nama Obat"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvsubsPopup" />
+
+            <TextView
+                android:id="@+id/tvTitleFrekObat"
+                style="@style/poppins14Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Frekuensi Penggunaan Obat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etNamaObat" />
+
+            <RadioGroup
+                android:id="@+id/rgFrekObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="@+id/tvTitleFrekObat"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleFrekObat">
+
+                <RadioButton
+                    android:id="@+id/rb1x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Satu kali sehari" />
+
+                <RadioButton
+                    android:id="@+id/rb2x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dua kali sehari" />
+
+                <RadioButton
+                    android:id="@+id/rb3x"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiga kali sehari" />
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rgJenisObat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="@+id/rgFrekObat"
+                app:layout_constraintTop_toBottomOf="@+id/rgFrekObat">
+
+                <RadioButton
+                    android:id="@+id/rbSebelum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sesudah Makan" />
+
+                <RadioButton
+                    android:id="@+id/rbSesudah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sebelum Makan" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvTitleDosis"
+                style="@style/poppins14Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:text="Dosis Obat"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgJenisObat" />
+
+            <EditText
+                android:id="@+id/etDosisObat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="200dp"
+                android:inputType="number"
+                android:hint="1/2/3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitleDosis" />
+
+            <Spinner
+                android:id="@+id/spDosisObat"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etDosisObat"
+                app:layout_constraintStart_toEndOf="@+id/etDosisObat"
+                app:layout_constraintTop_toTopOf="@+id/etDosisObat" />
+
+            <!--text view jumlah obat-->
+            <TextView
+                android:id="@+id/tvJumlahObat"
+                style="@style/poppins14Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Jumlah Obat"
+                app:layout_constraintStart_toStartOf="@+id/etDosisObat"
+                app:layout_constraintTop_toBottomOf="@+id/etDosisObat" />
+
+            <!--edit text jumlah obat-->
+            <EditText
+                android:id="@+id/etJumlahObat"
+                android:hint="1/2/3"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginEnd="36dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvJumlahObat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

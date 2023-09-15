@@ -6,9 +6,10 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 
-@Database(entities =  [PersonEntity::class], version = 1)
+@Database(entities =  [PersonEntity::class, DrugEntity::class], version = 2)
 abstract class PersonData : RoomDatabase(){
     abstract fun personDao() : PersonDao
+    abstract fun drugDao() : DrugDao
 
 
     companion object {

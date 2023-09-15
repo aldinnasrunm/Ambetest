@@ -13,6 +13,23 @@
         android:theme="@style/Theme.Ambetest"
         tools:targetApi="31">
         <activity
+            android:name=".View.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.AngketObatActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".View.AngketDateActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".View.AngketActivity"
             android:exported="false">
             <meta-data

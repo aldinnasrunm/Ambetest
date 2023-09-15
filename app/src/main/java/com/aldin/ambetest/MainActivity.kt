@@ -71,29 +71,20 @@ class MainActivity : AppCompatActivity() {
                 if(theData.isNotEmpty()){
                     withContext(Dispatchers.Main){
                         startActivity(Intent(this@MainActivity, DashboardActivity::class.java))
+                        finish()
                     }
                 }else{
                     withContext(Dispatchers.Main){
                         startActivity(Intent(this@MainActivity, AngketActivity::class.java))
+                        finish()
                     }
                 }
             }
-            finish()
+
         }else{
             startActivity(Intent(this, WelcomingActivity::class.java))
             finish()
         }
-
-//        if (!prefs.getBoolean("firstTime", true)){
-//            Handler().postDelayed({
-//                startActivity(Intent(this, DashboardActivity::class.java))
-//                finish()
-//            }, SPLASH_TIME_OUT)
-//        }else{
-//            startActivity(Intent(this, WelcomingActivity::class.java))
-//            finish()
-//        }
-
 
     }
 
@@ -101,14 +92,6 @@ class MainActivity : AppCompatActivity() {
         database.personDao().getAllMyEntities()
     }
 
-//    private fun insertData() {
-//        val randomNumber = Random.nextInt(100)
-//        val data = PersonEntity(0,"Aldin $randomNumber", 20)
-//
-//        lifecycleScope.launch(Dispatchers.IO) {
-//            insertPerson(data, database)
-//        }
-//    }
 
     suspend fun checkData(){
         withContext(Dispatchers.IO){

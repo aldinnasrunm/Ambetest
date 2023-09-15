@@ -21,3 +21,16 @@ interface PersonDao {
 }
 
 
+@Dao
+interface DrugDao {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insert(drugEntity: DrugEntity)
+
+    @Query("SELECT * FROM drug_info")
+    fun getAllMyEntities(): List<DrugEntity>
+
+    @Query("DELETE FROM drug_info WHERE id = :id")
+    fun deleteById(id: Int)
+}
+

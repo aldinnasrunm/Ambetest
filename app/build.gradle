@@ -14,6 +14,7 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
 
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
@@ -25,6 +26,8 @@ android {
         }
     }
     compileOptions {
+        coreLibraryDesugaringEnabled true
+
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -57,4 +60,12 @@ dependencies {
     kapt "androidx.room:room-compiler:$room_version"
 
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9")
+
+
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
+
+//    calendar imlementation kizitonwose/Calendar
+    // The view calendar library
+    implementation 'com.kizitonwose.calendar:view:2.3.0'
+    implementation 'com.kizitonwose.calendar:compose:2.3.0'
 }
